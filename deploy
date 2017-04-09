@@ -1,0 +1,8 @@
+-#!/bin/sh
+ssh root@159.203.141.143 <<EOF
+ cd /usr/share/nginx/html/node
+ git pull
+ npm install --production
+ pm2 restart all
+ exit
+EOF
